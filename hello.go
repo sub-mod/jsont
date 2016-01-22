@@ -3,8 +3,11 @@ package main
 import (
 	"fmt"
 	"strconv"
+	"unicode"
 )
 
+
+//https://github.com/golang/go/wiki/GoForCPPProgrammers
 func main() {
 	fmt.Println("example ")
 
@@ -19,6 +22,32 @@ func main() {
 	fmt.Println(a)
 
 	//Convert string to integer
-	fmt.Printf(strconv.Itoa(aa))
+	fmt.Println(strconv.Itoa(aa))
 
+	fmt.Println(unicode.IsUpper('A'))
+	fmt.Println(unicode.IsLower('a'))
+
+	//https://github.com/golang/go/wiki/Switch
+}
+
+type Circle struct {
+	x float64
+	y float64
+	r float64
+}
+
+const (
+	One Type = iota // 1
+	Two
+	Three
+)
+
+type Type int
+
+func (t Type) String() string {
+	s := ""
+	if t&One == One {
+		s += "One"
+	}
+	return s
 }

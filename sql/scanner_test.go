@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/sub-mod/sql"
+	"github.com/sub-mod/jsont/sql"
 )
 
 // Ensure the scanner can scan tokens correctly.
